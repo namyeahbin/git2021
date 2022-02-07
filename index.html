@@ -2,97 +2,268 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="discription" content="웹사이트 구조 연습">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>지속되는 아름다움,포렌코즈</title>
+	<meta name="discription" content="지속되는 아름다움,포렌코즈">
 	<!-- og -->
-	<meta property="og:title" content="웹사이트 구조 연습">
+	<meta property="og:title" content="Nam Yeah Bin Portfolio">
+	<meta property="og:description" content="I'm absolutely fully capable.">
 	<meta property="og:url" content="https://namyeahbin.netlify.app">
-	<meta property="og:image" content="https://namyeahbin.netlify.app/asset/images/ogimg.jpeg">
-	<meta propery="og:description" content="웹사이트 구조를 확인하기 위한 페이지입니다.">
-	<title>website Ex</title>
-
-	<!-- favicon -->
-	<!-- 32x32 -->
-	<link rel="icon" href="favicon.ico" type="any">
-	<link rel="icon" href="favicon.svg" type="image/svg+xml">
-	<!-- 180x180 -->
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="manifest" href="site.webmanifest">
-
-	<!-- css -->
+	<meta property="og:image" content="https://namyeahbin.netlify.app/images/namyeahbin_pf.png">
+	<!-- fabvicon -->
+	<!-- 32 / 180 / 192 / 512 -->
+	<link rel="icon" href="../common/images/favicon.ico" sizes="any">
+	<link rel="icon" href="../common/images/favicon.svg" type="image/svg+xml">
+	<!-- 180 x 180 -->
+	<link rel="apple-touch-icon" href="../common/images/apple-touch-icon.png">
+	<!-- 192 / 512 -->
+	<link rel="manifest" href="../common/js/manifest.json">
+	<!-- fonts -->
+	<link rel="stylesheet" href="../common/css/fonts.css">
 	<!-- 평준화 -->
-	<link rel="stylesheet" href="asset/css/normalize.css">
-	<!-- 웹폰트 -->
-	<link rel="stylesheet" href="asset/css/fonts.css">
-
-	<!-- style -->
-	<!-- 웹사이트 전반에 공통으로 들어가는 스타일 -->
-	<link rel="stylesheet" href="asset/css/style.css">
-	<!-- 이 페이지에만 들어가는 스타일 -->
+	<link rel="stylesheet" href="../common/css/normalize.css">
+	<!-- 미디어쿼리 선언 -->
 	<link rel="stylesheet" href="index.css">
-
-	<!-- script -->
-	<script src="asset/scripts/prefixfree.min.js"></script>
+	<link rel="stylesheet" media="(min-width:1280px)" href="index_p.css">
 </head>
 <body>
-	<!--  width:100% -->
-	<header>
-		<!-- 중앙정렬을 위한 한정된 범위 -->
-		<div class="wrapper" id="header_ht">
-			<h1>
-				<!-- 
-					"/"
-					루트 상대 경로.
-					로컬에서는 확인 되지 않음. 즉 서버에서만 확인 가능.
-					반드시 /로 시작.
-					index.html의 이름을 가진 경우 파일명 생략 가능하여 "/"표기 가능.(/about/)
-					그 외 다른 이름을 가진 경우 파일명 작성하여 경로 설정(/about/about.html)
+	<div class="container">
+		<header>
+			<!-- header -->
+			<p><a href="">[event] 신규 회원을 위한 포렌코즈의 특별한 혜택</a></p>
+			<!-- menu 모바일에서 숨김처리 -->
+			<div class="top">
+				<ul class="gnb">
+					<li><a href="">shop</a></li>
+					<li><a href="">sale</a></li>
+					<li><a href="">brand</a></li>
+					<li><a href="">community</a></li>
+					<li><a href="">for.tv</a></li>
+				</ul>
+				<!-- logo -->
+				<h1><a href="">로고</a></h1>
+				<!-- 모바일 메뉴 버튼 -->
+				<a href="#" id="toggle_menu">menu</a>
+				<!-- menu2 모바일에서 숨김처리 -->
+				<ul class="info">
+					<li id="search"><a href="">검색</a></li>
+					<li id="lang"><a href="">korean</a></li>
+					<li id="cart"><a href="">cart</a></li>
+					<li><a href="">join</a></li>
+					<li><a href="">login</a></li>
+				</ul>
+			</div>
+		</header>
 
-					지금 이 링크는 최상위 루트 디렉토리(폴더) 아래 index.html을 의미
-				 -->
-				<a href="/">
-					<img src="https://via.placeholder.com/185x50/FFC8A3/fff?text=logo" alt="로고">
-				</a>
-			</h1>
-			<ul id="register">
-				<li><a href="/register/login.html">login</a></li>
-				<!-- index.html 이름을 가지지 않았기 때문에 파일명 작성해야 함 -->
-				<li><a href="/register/joinus.html">join us</a></li>
-			</ul>
-			<ul id="gnb"> <!-- global navigation bar -->
-				<li><a href="/intro/">회사소개</a></li> <!-- intro/index.html -->
-				<li><a href="/brand/">브랜드소개</a></li> <!-- brand/index.html -->
-				<li><a href="/store/">매장안내</a></li> <!-- store/index.html -->
-				<li><a href="/service/">고객센터</a></li> <!-- service/index.html -->
-				<li><a href="/franchise/">가맹문의</a></li> <!-- franchise/index.html -->
-			</ul>
-		</div>
-	</header>
-	<main>
-		<img src="https://via.placeholder.com/980x300/BFD6E6/fff?text=gallery" alt="갤러리">
-		<div class="contents wrapper">
-			<section class="txt_box">
-				<h2>consectetur</h2>
-				<p>대중을 우리 공자는 천지는 기쁘며, 힘차게 사람은 내려온 위하여서. 가슴이 살았으며, 놀이 피고 맺어, 봄바람을 노년에게서 눈에 대중을 황금시대다.</p>
+		<!-- main -->
+		<main>
+			<!-- thumnail 1 -->
+			<section class="pic1">
+				<h2>cross the boundery <span class="txt kr">경계를 넘는</span> <span class="txt">forencos beauty</span></h2>
+				<a href="" class="btn">Shop now</a>
 			</section>
-			<section class="img_box">
-				<h2>velit</h2>
-				<figure>
-					<img src="https://via.placeholder.com/255x140/B584A1/fff?text=img1" alt=이미지1">
-					<figcaption>phasellus</figcaption>
-				</figure>
+
+			<!-- promotion -->
+			<section class="box box1">
+				<h2>promotion.</h2>
+				<ul class="slide slide1">
+					<li class="pd1">
+						<a href=""><img src="images/img1.jpg" alt="이미지1"></a>
+						<span class="txt txt1">베어 핏라스팅 쿠션</span> 
+						<span class="txt txt2">베이스</span> 
+						<span class="txt txt3">4color</span>
+						<p class="txt">
+							<span class="txt4">KRW 36,000</span> 
+							<span class="txt5">KRW 25,200</span>
+						</p>
+					</li>
+					<li class="pd2">
+						<a href=""><img src="images/img2.jpg" alt="이미지2"></a>
+						<span class="txt txt1">베어 핏라스팅 쿠션 리필</span> 
+						<span class="txt txt2">베이스</span> 
+						<span class="txt txt3">4color</span> 
+						<p class="txt">
+							<span class="txt4">KRW 15,000</span> 
+							<span class="txt5">KRW 10,500</span>
+						</p>
+					</li>
+					<li class="pd3">
+						<a href=""><img src="images/img3.jpg" alt="이미지3"></a>
+						<span class="txt txt1">베어 글리터 팔레트 01 누디</span>
+						<span class="txt txt2">아이섀도우</span> 
+						<span class="txt txt3">3color</span> 
+						<p class="txt">
+							<span class="txt4">KRW 20,000</span> 
+							<span class="txt5">KRW 14,000</span>
+						</p>
+					</li>
+				</ul>
+				<div class="swiper-scrollbar"></div>
 			</section>
-			<section class="img_box">
-				<h2>velit</h2>
-				<figure>
-					<img src="https://via.placeholder.com/255x140/927099/fff?text=img2" alt="이미지2">
-					<figcaption>sed sit</figcaption>
-				</figure>
+
+			<!-- thumnail2 -->
+			<div class="pic2">
+				<video src="video/forencos.mp4" loop="" autoplay="" muted=""></video>
+			</div>
+
+			<!-- thumnail3 -->
+			<section class="pic3">
+				<h2>all color</h2>
+				<a href="" class="btn">View more</a>
 			</section>
-	</main>
-	<footer class="wrapper">
-		<address>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </address>
-		Lorem ipsum dolor sit amet
-	</footer>
+
+			<!-- bestseller -->
+			<section class="box box2">
+				<h2>bestseller.</h2>
+				<ul class="slide slide2">
+					<li class="pd1">
+						<a href=""><img src="images/img4.jpg" alt="이미지4"></a>
+						<span class="txt txt1">타투 끌레르 벨벳 틴트</span> 
+						<span class="txt txt2">립틴트</span> 
+						<span class="txt txt3">11color</span> 
+						<p class="txt">
+							<span class="txt4">KRW 19,000</span> 
+							<span class="txt5">KRW 13,500</span>
+						</p>
+					</li>
+					<li class="pd2">
+						<a href=""><img src="images/img5.jpg" alt="이미지5"></a>
+						<span class="txt txt1">타투 쉬폰 틴트</span> 
+						<span class="txt txt2">립틴트</span> 
+						<span class="txt txt3">5color</span>
+						<p class="txt"> 
+							<span class="txt4">KRW 19,000</span> 
+							<span class="txt5">KRW 13,300</span>
+						</p>
+					</li>
+					<li class="pd3">
+						<a href=""><img src="images/img6.jpg" alt="이미지6"></a>
+						<span class="txt txt1">속 타투 틴트</span> 
+						<span class="txt txt2">립틴트</span> 
+						<span class="txt txt3">11color</span> 
+						<p class="txt">
+							<span class="txt4">KRW 11,000</span> 
+							<span class="txt5">KRW 7,700</span>
+						</p>
+					</li>
+				</ul>
+				<div class="swiper-scrollbar"></div>
+			</section>
+
+			<!-- thumnail4 -->
+			<section class="pic4">
+				<h2><a href="">real <span class="txt">metal</span> glitter</a></h2>
+			</section>
+
+			<!-- thumnail5 -->
+			<section class="pic5">
+				<h2><a href="">pic5</a></h2>
+			</section>
+
+			<!-- recommend -->
+			<section class="box box3">
+				<h2>recommend.</h2>
+				<ul class="slide slide3">
+					<li class="pd1">
+						<a href=""><img src="images/img7.jpg" alt="이미지7"></a>
+						<span class="txt txt1">메탈 글리찌</span> 
+						<span class="txt txt2">아이섀도우</span> 
+						<span class="txt txt3">5color</span> 
+						<span class="txt txt2">KRW 9,100</span>
+					</li>
+					<li class="pd2">
+						<a href=""><img src="images/img8.jpg" alt="이미지8"></a>
+						<span class="txt txt1">스키니타투 쉐이핑 브로우카라</span> 
+						<span class="txt txt2">아이브로우</span> 
+						<span class="txt txt3">3color</span> 
+						<span class="txt txt2">KRW 10,500</span>
+					</li>
+					<li class="pd3">
+						<a href=""><img src="images/img9.jpg" alt="이미지9"></a>
+						<span class="txt txt1">스키니타투 올프루프 아이라이너</span> 
+						<span class="txt txt2">아이라이너</span> 
+						<span class="txt txt3">5color</span> 
+						<span class="txt txt2">KRW 9,100</span>
+					</li>
+				</ul>
+				<div class="swiper-scrollbar"></div>
+			</section>
+
+			<!-- brand story -->
+			<section class="box4">
+				<h2>
+					eternal youth.
+					<span class="txt">지속되는 아름다움 포렌코즈.</span>
+				</h2>
+				<a href="" class="btn">Brand story</a>
+			</section>
+		</main>
+
+		<!-- footer -->
+		<footer>
+			<!-- 모바일에서 숨김처리 -->
+			<div class="bottom_menu">
+				<scticon class="outtro">
+					<h3>Welcome to FORENCOS <span class="txt">The special benefits of the FORENCOS</span></h3>
+				</scticon>	
+				<section class="adress">
+					<h3>About us</h3>
+						<ul class="adress_list">
+							<li>상호: (주)포렌코즈</li>
+							<li>주소: 성남시 분당구 판교로 186 포렌코즈빌딩</li>
+							<li>사업등록번호: 229-81-25751 사업자 	정보확인</li>
+							<li>통신판매업신고: 2016-경기성남-0766</li>
+							<li>대표자: CHUNHEE JUNG</li>
+							<li>국민은행: 070-25-0038-111 (주)포렌코즈</li>
+						</ul>
+				</section>
+
+				<!-- 모바일에서 숨김처리 -->
+				<section class="cs">
+					<h3>Customer center</h3>
+					<ul class="cs_list">
+						<li id="kakao">카카오상담톡 @포렌코즈</li>
+						<li id="number">1588-0719</li>
+						<li>평일: 10:00-16:00</li>
+						<li>점심: 12:30-13:30</li>
+						<li>매주 금요일: 12:30-14:00</li>
+						<li>토/일요일 및 공휴일은 휴무입니다</li>
+					</ul>
+					<!-- 모바일 메뉴 버튼 -->
+					<a href="#" class="plus_menu">menu</a>
+				</section>
+
+				<!-- 모바일에서 숨김처리 -->
+				<section class="pd">
+					<h3>Product</h3>
+					<ul class="pd_list">
+						<li><a href="">구매사은품</a></li>
+						<li><a href="">이벤트</a></li>
+						<li><a href="">고객센터</a></li>
+					</ul>
+					<!-- 모바일 메뉴 버튼 -->
+					<a href="#" class="plus_menu">menu</a>
+				</section>
+
+				<!-- 모바일에서 숨김처리 -->
+				<section class="cm">
+					<h3>Community</h3>
+					<ul class="cm_list">
+						<li><a href="">회원가입</a></li>
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">장바구니</a></li>
+						<li><a href="">위시리스트</a></li>
+					</ul>
+					<!-- 모바일 메뉴 버튼 -->
+					<a href="#" class="plus_menu">menu</a>
+				</section>
+			</div>
+
+			<section class="pf">
+				<a href="" class="btn">포트폴리오 바로가기</a>
+				<p>본 사이트는 비상업적 용도로 만들어진 포트폴리오 사이트입니다. <span class="txt">사이트 제작 시 사용된 일부 이미지의 라이센스는 포렌코즈에게 있습니다.</span></p>
+			</section>
+		</footer>
+	</div>
 </body>
 </html>
